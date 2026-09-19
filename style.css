@@ -90,3 +90,49 @@ nav a:hover {
     margin-bottom: 1em;
     line-height: 1.6;
 }
+
+/* ===================================================
+   音声ポータル・ギャラリー用スタイル
+   =================================================== */
+
+/* グリッド配置（画面幅に合わせて自動折り返し） */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px 0;
+}
+
+/* 音声カードのスタイル（gallery-card にも適用できるように追加） */
+.media-card, .audio-card, .gallery-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ホバー時に軽く浮き上がる効果 */
+.media-card:hover, .gallery-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 音声プレイヤーをカード幅にフィットさせる */
+.media-card audio, .gallery-card audio {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* ファイル名・タイトルの装飾（card-title にも適用できるように追加） */
+.audio-title, .card-title {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #333333;
+  word-break: break-all;
+  margin: 0;
+}
